@@ -2,8 +2,9 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false,
     "jsx": "preserve",
+    "jsxFactory": "h",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -11,13 +12,16 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "typeRoots": ["node_modules/@types"],
-    "types": ["webpack-env", "jest"],
+    "pretty": true,
+    "noImplicitThis": true,
+    "typeRoots": ["node_modules/@types", "node_modules/vue/types", "./src/**/*.d.ts"],
+    "types": ["webpack-env", "mocha", "jest"],
     "paths": {
       "@/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "files": ["./src/shims-vue.d.ts"]
 }

@@ -3,12 +3,10 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import './assets/styles/normalize.less'
+import './utils/useElement'
 
 Vue.config.productionTip = false
-
-import { Button, Select } from 'element-ui'
-
-Vue.use(Button)
 
 new Vue({
   router,

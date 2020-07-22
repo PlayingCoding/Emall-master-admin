@@ -7,6 +7,7 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'BasicLayout',
     component: BasicLayout,
+    redirect: '/home',
     children: [
       {
         path: 'home',
@@ -18,7 +19,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+    component: () => import(/* webpackChunkName: "login" */ '../views/Login/index.vue')
   },
   {
     path: '*',

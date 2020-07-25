@@ -8,8 +8,10 @@ module.exports = {
     'eslint:recommended',
     '@vue/typescript/recommended',
     '@vue/prettier',
-    '@vue/prettier/@typescript-eslint'
+    '@vue/prettier/@typescript-eslint',
+    'plugin:jsx-control-statements/recommended'
   ],
+  plugins: ['jsx-control-statements'],
   parserOptions: {
     ecmaVersion: 2020
   },

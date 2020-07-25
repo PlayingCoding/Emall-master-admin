@@ -1,0 +1,31 @@
+.global-header {
+  padding: 0 16px;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.global-header,
+.global-header-left,
+.global-header-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.global-header-right {
+  justify-content: flex-end;
+  .avatar {
+    cursor: pointer;
+  }
+}
+
+.collapse {
+  transition: 0.25s;
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.is-fold {
+  transform: rotate(-180deg);
+}
